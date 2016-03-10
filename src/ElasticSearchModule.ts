@@ -20,11 +20,11 @@ export class ElasticSearchModule implements Module {
     // -------------------------------------------------------------------------
 
     getName(): string {
-        return 'ElasticSearchModule';
+        return "ElasticSearchModule";
     }
 
     getConfigurationName(): string {
-        return 'elasticsearch';
+        return "elasticsearch";
     }
 
     isConfigurationRequired(): boolean {
@@ -75,7 +75,7 @@ export class ElasticSearchModule implements Module {
         if (this.configuration.log)
             options.log = this.configuration.log;
 
-        let elasticsearch = require('elasticsearch');
+        let elasticsearch = require("elasticsearch");
         this._client = new elasticsearch.Client(options);
     }
 
@@ -83,7 +83,7 @@ export class ElasticSearchModule implements Module {
         return new Promise((ok, fail) => {
             this._client.ping((error: any) => {
                 if (error) {
-                    fail('elasticsearch cluster is down!');
+                    fail("elasticsearch cluster is down!");
                 } else {
                     ok();
                 }
