@@ -1,3 +1,5 @@
+> This repository is deprecated. Microframework architecure has changed. Please consider writing your own module for a newer versions of microframework.
+
 # ElasticSearch module for Microframework
 
 Adds integration between [elastic search](https://github.com/elastic/elasticsearch-js) and 
